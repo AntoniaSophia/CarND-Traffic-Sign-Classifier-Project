@@ -92,7 +92,7 @@ My final training set had 34799 number of images. My validation set and test set
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-The code for my final model is located in the seventh cell of the ipython notebook. 
+The code for my final model is located in the cells 7 and 12 of the ipython notebook. 
 
 My final model consisted of the following layers:
 
@@ -113,9 +113,9 @@ My final model consisted of the following layers:
 | Dropout       | Just in training mode with dropout rate 0.90 |
 | Fully connected   | input 120 , output 43                          |
 | RELU          |                       |
-| Softmax       | etc.                          |
-|           |                       |
-|           |                       |
+| Softmax Cross Entropy      |                           |
+| L2 loss          |                       |
+| Loss operation   |  over reduced mean of sum (softmax cross entropy + L2 loss)                      |
  
 
 
