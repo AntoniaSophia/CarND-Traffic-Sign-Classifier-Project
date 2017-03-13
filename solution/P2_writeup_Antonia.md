@@ -228,18 +228,18 @@ Here are the results of the prediction:
 
 | Image             |     Prediction                    |  Ok or NOK
 |:---------------------:|:---------------------------------------------:| 
-| No vehicle         | No vehicle                     |  OK
-| Stop          | Stop                 | OK
-| Go straight or left         | Go straight or left                     | OK
-| Stop            | Stop                 | OK 
-| Children crossing     | Road work                  | NOK
-| Children crossing         | Right-of-way at the next                    |  NOK
-| Children crossing          | Children crossing                 | OK
-| Priority road         | Priority road                     | OK 
-| Ahead only            | Ahead only                  | OK
-| Roundabout mandatory     | Roundabout mandatory                   | OK
-| Yield        | Yield                   |  OK
-| No passing          | No passing                    | OK
+| No vehicle         | No vehicle                     |  OK |
+| Stop          | Stop                 | OK |
+| Go straight or left         | Go straight or left                     | OK |
+| Stop            | Stop                 | OK  |
+| Children crossing     | Road work                  | NOK |
+| Children crossing         | Right-of-way at the next                    |  NOK |
+| Children crossing          | Children crossing                 | OK |
+| Priority road         | Priority road                     | OK  |
+| Ahead only            | Ahead only                  | OK |
+| Roundabout mandatory     | Roundabout mandatory                   | OK |
+| Yield        | Yield                   |  OK |
+| No passing          | No passing                    | OK |
 
 
 The model was able to correctly guess 10 of the 12 traffic signs, which gives an accuracy of 83,33%. This compares rather poor compared to the accuracy on the test set of 93.4%
@@ -263,6 +263,6 @@ For the first image 'No vehicle' ![No vehicle - found in Internet][image10], the
 
 
 
-For the other images I refer to the following table from the ![Code][Jupyter_Notebook]
+For the other images I refer to the following table from the [Jupyter_Notebook](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.ipynb)
 
 ![Top 5 predictions][image4] 
