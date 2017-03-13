@@ -195,8 +195,25 @@ Here are five German traffic signs that I found on the web:
 
 ![Stop - found in Internet][image11] - 'Stop' - found in Internet
 
-![Go straight or left - found in Internet][image12] 
+![Go straight or left - found in Internet][image12] - 'Go straight or left' - found in Internet
 
+![Stop - found in Internet][image13] - 'Stop' - found in Internet
+
+![Children crossing - found in Internet][image14] - 'Children crossing' - found in Internet
+
+![Children crossing - found in Internet][image15] - 'Children crossing' - found in Internet
+
+![Children crossing - found in Internet][image16] - 'Children crossing' - found in Internet
+
+![Priority road - found in Internet][image17] - 'Priority road' - taken on Stuttgart road at night and during rain
+
+![Ahead only - found in Internet][image18]  - 'Ahead only' - taken on Stuttgart road at night and during rain
+
+![Roundabout mandatory - found in Internet][image19]  - 'Roundabout mandatory' - taken on Stuttgart road at night and during rain
+
+![Yield - found in Internet][image20]  - 'Yield' - taken on Stuttgart road at night and during rain
+
+![No passing - found in Internet][image21]  - 'No passing' - taken on Stuttgart road at night and during rain
 
 The first image might be difficult to classify because ...
 
