@@ -121,18 +121,39 @@ My final model consisted of the following layers:
 
 ####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-The code for training the model is located in the eigth cell of the ipython notebook. 
+The code for training the model is located in the cell number 14 of the ipython notebook. 
 
-To train the model, I used an ....
+To train the model, I used:
+* AdamOptimizer
+* a learning rate of 0.001
+* L2 loss in order to prevent from overfitting
+* a batch size of 128
+* 110 Epochs
+
+Actually I'm just shuffling the training data for each Epoch, followed by a evaluation step based on the test data at 
+the end of each Epoch.
+The final validation of the overall accuracy against the validation set takes plase in cell 14
+
+I fear there is nothing much to tell further - it is a straight forward path without any magic.... ;-)
+
 
 ####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
+I was confused by the advise to separate between training, test and validation sets. So either I made a big mistake,
+or this is almost done already within the test data. So at that point the greatest challenge is to keep the validation
+set really out of the game until the very end.
+
+Converting the data to grayscale was a bit of a pain because I wanted to use the histogram localization. I found this on the
+web that it will increase the contrast and sharpen the picture. So I wanted to try out!
+Problem is the runtime: processing all data takes around 10 minutes - so I processed this data and stored it locally.
+This preprocessed data is now imported again in cell 9 "preproccesimages.pickle"
+
+The code for calculating the accuracy of the model is located in the cell number 14 of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy (I did not explicitely calculate this value - it this number of any additional value !? )
+* validation set accuracy of 0.97 (see cell 14) 
+* test set accuracy of 0.943 (see cell 14)
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -141,9 +162,13 @@ If an iterative approach was chosen:
 * Which parameters were tuned? How were they adjusted and why?
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
+I have chosen a well known architecture
+* What architecture was chosen? --> the LeNet archicture which was presented in the lesson 9:
+* Why did you believe it would be relevant to the traffic sign application? --> to be honest I didn't even think about that question before.... upps.... I guess I strongly assumed that the lesson would not present a "wrong" approach at the beginning.
+However I'm sure there even better approaches (e.g I'd like to use an Inception architecure, but ran out of time)
+* Ok, so why do I really believe it is a good architecure: 
+** convolutional layer allow to search for the whole image and even in case it is vertically and horizontally translated, or declined. 
+** Finally the sharing the weights leads to a drastic reduction of required parameters. 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
 
