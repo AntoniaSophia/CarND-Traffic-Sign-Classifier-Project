@@ -51,7 +51,8 @@ You're reading it! and here is a
 
 ####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-The code for this step is contained in the cells 3,4,5 of the IPython notebook ![Jupyter_Notebook] .  
+The code for this step is contained in the cells 3,4,5 of the IPython notebook [Jupyter_Notebook](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.ipynb)
+ 
 
 I used the matplotlib library to calculate summary statistics of the traffic signs data set:
 
@@ -266,3 +267,16 @@ For the first image 'No vehicle' ![No vehicle - found in Internet][image10], the
 For the other images I refer to the following table from the [Jupyter_Notebook](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.ipynb)
 
 ![Top 5 predictions][image4] 
+
+
+####4. Let's give an overall feedback
+
+As I have no background at AI / Deep learning at all this project was really eye-opening for me!
+This kind of method will change a lot of things and move the world I'm sure!
+I feel that I have learned more in the past 4 weeks than in the last 4 years in my life...
+Working on classic algorithms for e.g. traffic sign detection now looks somehow foolish and inefficient.....
+
+Definitely I had a tough schedule, because I cannot work on the course for the next 2 weeks, so I had to hurry up a little bit.
+But I had so much fun learning all of that stuff and cannot wait to continue with the course ;-)
+
+Big kudos to all Udacity team - you guys really know how to motivate people!
