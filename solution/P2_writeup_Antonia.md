@@ -16,14 +16,15 @@ The goals / steps of this project are the following:
 
 [image1]: ./../docu_images/statistics.png "Data statistics"
 [image2]: ./../docu_images/sign_original.png "Original sign"
-[image3]: ./../docu_images/sign_preprocessed.png "Precprocessed sign"
+[image3]: ./../docu_images/sign_preprocessed.png "Preprocessed sign"
+[image4]: ./../docu_images/top5predictions.png "Top 5 predictions"
 
 [image10]: ./../data/sue01.png "sue01.png"
 [image11]: ./../data/sue02.png "sue02.png"
 [image12]: ./../data/sue03.png "sue03.png"
 [image13]: ./../data/sue04.png "sue04.png"
 [image14]: ./../data/sue05.png "sue05.png"
-[image15]: ./../data/sue5a.png "sue05a.png"
+[image15]: ./../data/sue05a.png "sue05a.png"
 [image16]: ./../data/sue06.png "sue06.png"
 [image17]: ./../data/sue07.png "sue07.png"
 [image18]: ./../data/sue08.png "sue08.png"
@@ -189,7 +190,7 @@ How does the final model's accuracy on the training, validation and test set pro
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are 12 German traffic signs that I found on the web:
 
 ![No vehicle - found in Internet][image10] - 'No vehicle' - found in Internet
 
@@ -215,38 +216,53 @@ Here are five German traffic signs that I found on the web:
 
 ![No passing - found in Internet][image21]  - 'No passing' - taken on Stuttgart road at night and during rain
 
-The first image might be difficult to classify because ...
+The first 'Go straight or left' might be difficult to classify because there are stickers on the sign.
+Also the two 'children crossing' (sue05.png and sue05a.png) might be difficult as this is definitely special: I must admit that it was an image which is hard to identify as there are a lot of bullet holes in there (it was taken from the island Corse where bullet holes in traffic signs are somehow natural....).
+Also the 'real life' signs from Stuttgart seem not trivial, especially the 'Priority road' sign seems to be tough.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+The code for making predictions on my final model is located in the cell 21 of the Ipython notebook.
 
 Here are the results of the prediction:
 
-| Image             |     Prediction                    | 
+| Image             |     Prediction                    |  Ok or NOK
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign         | Stop sign                     | 
-| U-turn          | U-turn                    |
-| Yield         | Yield                     |
-| 100 km/h            | Bumpy Road                  |
-| Slippery Road     | Slippery Road                   |
+| No vehicle         | No vehicle                     |  OK
+| Stop          | Stop                 | OK
+| Go straight or left         | Go straight or left                     | OK
+| Stop            | Stop                 | OK 
+| Children crossing     | Road work                  | NOK
+| Children crossing         | Right-of-way at the next                    |  NOK
+| Children crossing          | Children crossing                 | OK
+| Priority road         | Priority road                     | OK 
+| Ahead only            | Ahead only                  | OK
+| Roundabout mandatory     | Roundabout mandatory                   | OK
+| Yield        | Yield                   |  OK
+| No passing          | No passing                    | OK
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 10 of the 12 traffic signs, which gives an accuracy of 83,33%. This compares rather poor compared to the accuracy on the test set of 93.4%
+
+To be honest I wanted to select difficult images - and as sue05a.png is only the left/right flipped image of sue05.png this is now rather unfair towards the network. Actually a result 10 out of 11 would be more fair - but still below 97% of accuracy against the validation set (of course a set of 11 or 12 images gives no real statistically relevant information).
+
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image 'No vehicle' ![No vehicle - found in Internet][image10], the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
 | Probability           |     Prediction                    | 
 |:---------------------:|:---------------------------------------------:| 
-| .60               | Stop sign                     | 
-| .20             | U-turn                    |
-| .05         | Yield                     |
-| .04             | Bumpy Road                  |
-| .01           | Slippery Road                   |
+| .9028               | No vehicle                    | 
+| .0312             | Ahead only                   |
+| .0271         | Yield                     |
+| .0086             | Priority Road                  |
+| .005           | Keep left                   |
 
 
-For the second image ... 
+
+For the other images I refer to the following table from the ![Code][Jupyter_Notebook]
+
+![Top 5 predictions][image4] 
