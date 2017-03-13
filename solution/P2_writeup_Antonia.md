@@ -192,7 +192,9 @@ How does the final model's accuracy on the training, validation and test set pro
 Here are five German traffic signs that I found on the web:
 
 ![No vehicle - found in Internet][image10] - 'No vehicle' - found in Internet
-![Stop - found in Internet][image11] 
+
+![Stop - found in Internet][image11] - 'Stop' - found in Internet
+
 ![Go straight or left - found in Internet][image12] 
 
 
