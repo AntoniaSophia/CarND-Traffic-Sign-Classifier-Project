@@ -3,4 +3,4 @@
 #**Solution by Antonia Reiter as per 13.03.2017**
 
 Please refer to report at [P2_writeup_Antonia.md](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project
-/blob/master/Solution/P1_writeup_Antonia.md) 
+/blob/master/Solution/P2_writeup_Antonia.md) 
