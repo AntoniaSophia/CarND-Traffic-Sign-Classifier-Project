@@ -13,8 +13,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
+
 [image1]: ./../data/sue01.png "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
+[image2]: ./../docu_images/statistics.png "Data statistics"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
@@ -35,7 +36,7 @@ You're reading it! and here is a
 * link to the HTML output of the notebook [HTML Notebook Output](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.html)
 * link to the additional test data [Test data](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/data)
 * link to the final solution code [Solution code](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution)
- 
+
 
 ###Data Set Summary & Exploration
 
