@@ -30,7 +30,12 @@ The goals / steps of this project are the following:
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a
+* link to my [Jupyter Notebook](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.ipynb)
+* link to the HTML output of the notebook [HTML Notebook Output](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.html)
+* link to the additional test data [Test data](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/data)
+* link to the final solution code [Solution code](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution)
+ 
 
 ###Data Set Summary & Exploration
 
