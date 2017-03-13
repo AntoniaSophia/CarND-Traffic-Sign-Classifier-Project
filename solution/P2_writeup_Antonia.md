@@ -164,13 +164,6 @@ My final model results were:
 * validation set accuracy of 0.97 (see cell 14) 
 * test set accuracy of 0.943 (see cell 14)
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
 I have chosen a well known architecture
 * What architecture was chosen? --> the LeNet archicture which was presented in the lesson 9:
 * Why did you believe it would be relevant to the traffic sign application? --> to be honest I didn't even think about that question before.... upps.... I guess I strongly assumed that the lesson would not present a "wrong" approach at the beginning.
