@@ -42,7 +42,7 @@ The goals / steps of this project are the following:
 
 You're reading it! and here is a
 * link to my [Jupyter_Notebook](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.ipynb)
-* link to the HTML output of the notebook [HTML_Notebook_Output](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.html)
+* link to the HTML output of the notebook [HTML_Notebook_Output](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.html) which contains also nice pictures of the feature layer outputs including a short discussion
 * link to the additional test data [Test data](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/data)
 * link to the final solution code [Solution code](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution)
 
