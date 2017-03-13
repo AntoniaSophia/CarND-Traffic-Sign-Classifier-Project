@@ -77,7 +77,7 @@ of them whereas for others only ~200 are available
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
 The code for this step is contained in the cell number 6 of the IPython notebook.
-I used the followinf 3 steps:
+I used the following 3 steps:
 * converting to gray (in order to remove information which might not be required and makes the network smaller in terms of necessary weights). I have seen some images with very bad contrast (very dark) and feslt I have to raise the contrast which is possible at the easiest in case of grayscale....
 * histogram localization (in order to finally raise the contrast)
 * scaling to be in (-1,1) (in order to balance the images not to contain high numbers which might affect the maths negatively)
@@ -184,7 +184,7 @@ How does the final model's accuracy on the training, validation and test set pro
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are 12 German traffic signs that I found on the web:
+Here are 12 German traffic signs that I found on the web and taken myself via smartphone:
 
 ![No vehicle - found in Internet][image10] - 'No vehicle' - found in Internet
 
