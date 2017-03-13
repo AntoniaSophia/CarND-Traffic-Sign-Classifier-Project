@@ -19,17 +19,17 @@ The goals / steps of this project are the following:
 [image3]: ./../docu_images/sign_preprocessed.png "Precprocessed sign"
 
 [image10]: ./../data/sue01.png "sue01.png"
-[image11]: ./../data/sue01.png "sue02.png"
-[image12]: ./../data/sue01.png "sue03.png"
-[image13]: ./../data/sue01.png "sue04.png"
-[image14]: ./../data/sue01.png "sue05.png"
-[image15]: ./../data/sue01.png "sue05a.png"
-[image16]: ./../data/sue01.png "sue06.png"
-[image17]: ./../data/sue01.png "sue07.png"
-[image18]: ./../data/sue01.png "sue08.png"
-[image19]: ./../data/sue01.png "sue09.png"
-[image20]: ./../data/sue01.png "sue10.png"
-[image21]: ./../data/sue01.png "sue11.png"
+[image11]: ./../data/sue02.png "sue02.png"
+[image12]: ./../data/sue03.png "sue03.png"
+[image13]: ./../data/sue04.png "sue04.png"
+[image14]: ./../data/sue05.png "sue05.png"
+[image15]: ./../data/sue5a.png "sue05a.png"
+[image16]: ./../data/sue06.png "sue06.png"
+[image17]: ./../data/sue07.png "sue07.png"
+[image18]: ./../data/sue08.png "sue08.png"
+[image19]: ./../data/sue09.png "sue09.png"
+[image20]: ./../data/sue10.png "sue10.png"
+[image21]: ./../data/sue11.png "sue11.png"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -191,8 +191,10 @@ How does the final model's accuracy on the training, validation and test set pro
 
 Here are five German traffic signs that I found on the web:
 
-![No vehicle - found in Internet][image10] ![Stop - found in Internet][image11] ![Go straight or left - found in Internet][image12] 
-![alt text][image7] ![alt text][image8]
+![No vehicle - found in Internet][image10] - 'No vehicle' - found in Internet
+![Stop - found in Internet][image11] 
+![Go straight or left - found in Internet][image12] 
+
 
 The first image might be difficult to classify because ...
 
