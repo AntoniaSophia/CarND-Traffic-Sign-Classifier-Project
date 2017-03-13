@@ -226,8 +226,8 @@ The code for making predictions on my final model is located in the cell 21 of t
 
 Here are the results of the prediction:
 
-| Image             |     Prediction                    |  Ok or NOK
-|:---------------------:|:---------------------------------------------:| 
+| Image             |     Prediction                    |  Ok or NOK | 
+|:---------------------:|:---------------------------------------------:|.------:|
 | No vehicle         | No vehicle                     |  OK |
 | Stop          | Stop                 | OK |
 | Go straight or left         | Go straight or left                     | OK |
