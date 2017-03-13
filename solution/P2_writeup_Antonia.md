@@ -14,14 +14,15 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 
-[image1]: ./../data/sue01.png "Visualization"
-[image2]: ./../docu_images/statistics.png "Data statistics"
-[image3]: ./examples/random_noise.jpg "Random Noise"
+[image1]: ./../docu_images/statistics.png "Data statistics"
+[image2]: ./../docu_images/sign_original.png "Original sign"
+[image3]: ./../docu_images/sign_preprocessed.png "Precprocessed sign"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image10]: ./../data/sue01.png "Visualization"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -32,8 +33,8 @@ The goals / steps of this project are the following:
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a
-* link to my [Jupyter Notebook](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.ipynb)
-* link to the HTML output of the notebook [HTML Notebook Output](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.html)
+* link to my [Jupyter_Notebook](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.ipynb)
+* link to the HTML output of the notebook [HTML_Notebook_Output](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution/Traffic_Sign_Classifier.html)
 * link to the additional test data [Test data](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/data)
 * link to the final solution code [Solution code](https://github.com/AntoniaSophia/CarND-Traffic-Sign-Classifier-Project/blob/master/solution)
 
@@ -42,37 +43,41 @@ You're reading it! and here is a
 
 ####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-The code for this step is contained in the second code cell of the IPython notebook.  
+The code for this step is contained in the cells 3,4,5 of the IPython notebook ![Jupyter_Notebook] .  
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+I used the matplotlib library to calculate summary statistics of the traffic signs data set:
 
-* The size of training set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of test set is 12630
+* The size of validation set is 4410
+* The shape of a traffic sign image is 32x32x3 (as it is with 3 color channels)
+* The number of unique classes/labels in the data set is 43
 
 ####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
 The code for this step is contained in the third code cell of the IPython notebook.  
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data is being distributed
+among the different classes. It is clearly visible that the data is not balanced, so there are e.g. ~2000 from some 
+of them whereas for others only ~200 are available
 
-![alt text][image1]
+![Statistics][image1]
 
 ###Design and Test a Model Architecture
 
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
-The code for this step is contained in the fourth code cell of the IPython notebook.
-
-As a first step, I decided to convert the images to grayscale because ...
+The code for this step is contained in the cell number 6 of the IPython notebook.
+I used the followinf 3 steps:
+* converting to gray (in order to remove information which might not be required)
+* histogram localization (in order to raise the contrast)
+* scaling to be in (-1,1) (in order to balance the images not to contain high numbers which might affect the maths negatively)
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![Original traffic sign][image2]
+![Preprocessed traffic sign][image3]
 
-As a last step, I normalized the image data because ...
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
