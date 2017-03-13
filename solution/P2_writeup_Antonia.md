@@ -17,12 +17,19 @@ The goals / steps of this project are the following:
 [image1]: ./../docu_images/statistics.png "Data statistics"
 [image2]: ./../docu_images/sign_original.png "Original sign"
 [image3]: ./../docu_images/sign_preprocessed.png "Precprocessed sign"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-[image10]: ./../data/sue01.png "Visualization"
+
+[image10]: ./../data/sue01.png "sue01.png"
+[image11]: ./../data/sue01.png "sue02.png"
+[image12]: ./../data/sue01.png "sue03.png"
+[image13]: ./../data/sue01.png "sue04.png"
+[image14]: ./../data/sue01.png "sue05.png"
+[image15]: ./../data/sue01.png "sue05a.png"
+[image16]: ./../data/sue01.png "sue06.png"
+[image17]: ./../data/sue01.png "sue07.png"
+[image18]: ./../data/sue01.png "sue08.png"
+[image19]: ./../data/sue01.png "sue09.png"
+[image20]: ./../data/sue01.png "sue10.png"
+[image21]: ./../data/sue01.png "sue11.png"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -69,8 +76,8 @@ of them whereas for others only ~200 are available
 
 The code for this step is contained in the cell number 6 of the IPython notebook.
 I used the followinf 3 steps:
-* converting to gray (in order to remove information which might not be required)
-* histogram localization (in order to raise the contrast)
+* converting to gray (in order to remove information which might not be required and makes the network smaller in terms of necessary weights). I have seen some images with very bad contrast (very dark) and feslt I have to raise the contrast which is possible at the easiest in case of grayscale....
+* histogram localization (in order to finally raise the contrast)
 * scaling to be in (-1,1) (in order to balance the images not to contain high numbers which might affect the maths negatively)
 
 Here is an example of a traffic sign image before and after grayscaling.
@@ -166,10 +173,16 @@ I have chosen a well known architecture
 * What architecture was chosen? --> the LeNet archicture which was presented in the lesson 9:
 * Why did you believe it would be relevant to the traffic sign application? --> to be honest I didn't even think about that question before.... upps.... I guess I strongly assumed that the lesson would not present a "wrong" approach at the beginning.
 However I'm sure there even better approaches (e.g I'd like to use an Inception architecure, but ran out of time)
-* Ok, so why do I really believe it is a good architecure: 
-** convolutional layer allow to search for the whole image and even in case it is vertically and horizontally translated, or declined. 
-** Finally the sharing the weights leads to a drastic reduction of required parameters. 
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+
+Ok, so why do I really believe it is a good architecure: 
+* convolutional layer allow to search for the whole image and even in case it is vertically and horizontally translated, or declined. 
+* From my point of view I have used a relatively simple network and reduced parameters by grayscaling. 100 Epochs take around 3 minutes on my laptop which has a GPU but is not really a high-end laptop...
+* my gut feeling says that the combination of a convolutional layer, relu, max-pooling and dropout is very benefitial because it prevents overfitting pretty well and dropouts make the whole network more robust
+* The sharing the weights leads to a further drastic reduction of required parameters (also the max-pooling of course)
+* Final statement could be: a simple solution that works fast and with good results of 97% accuracy ;-)
+
+How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+--> the accuracy on training and test set is not really what matters in my opinion. The only prove of evidence comes the accuracy of the validation set in case the network has never seen those data before.
  
 
 ###Test a Model on New Images
@@ -178,7 +191,7 @@ However I'm sure there even better approaches (e.g I'd like to use an Inception 
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
+![No vehicle - found in Internet][image10] ![Stop - found in Internet][image11] ![Go straight or left - found in Internet][image12] 
 ![alt text][image7] ![alt text][image8]
 
 The first image might be difficult to classify because ...
