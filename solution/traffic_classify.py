@@ -9,7 +9,7 @@ from skimage import exposure
 from scipy.ndimage.filters import gaussian_filter
 import matplotlib.pyplot as plt
 
-archive_file = './../data/traffic-signs-data.zip'
+archive_file = './../../full_data/traffic-signs-data.zip'
 dataset = import_trafficsign(archive_file)
 
 X_train_full, y_train_full = dataset['X_train'], dataset['y_train']
@@ -103,8 +103,8 @@ for filename in glob.glob(r'../data/Sue*.png'):
 
 y_valid = [15,14,37,14,28,28,28,12,35,40,13,9]
 
-# plt.imshow(face.squeeze(), cmap='gray')
-# plt.show()
+#plt.imshow(X_valid[0].squeeze(), cmap='gray')
+#plt.show()
 
 # ## Training Pipeline
 x = tf.placeholder(tf.float32, (None, 32, 32, 1))
@@ -117,8 +117,8 @@ one_hot_y = tf.one_hot(y, 43)
 resultCNN = tf.nn.softmax(CNN[0])
 topPredictions = tf.nn.top_k(resultCNN, 5)
 
-correct_prediction = tf.equal(tf.argmax(CNN[0], 1), tf.argmax(one_hot_y, 1))
-accuracy_operation = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+#correct_prediction = tf.equal(tf.argmax(CNN[0], 1), tf.argmax(one_hot_y, 1))
+#accuracy_operation = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 
 save_file = './lenet_traffic'

@@ -22,7 +22,7 @@ y_valid_new.append(14)
 # 
 # Load the traffic sign data from zipfile directly
 #
-archive_file = './../data/traffic-signs-data.zip'
+archive_file = './../../full_data/traffic-signs-data.zip'
 dataset = import_trafficsign(archive_file)
 
 X_train, y_train = dataset['X_train'], dataset['y_train']
@@ -124,8 +124,9 @@ def preprocess_dataset(X, y = None):
 import pickle
 import os.path
 
-if os.path.isfile('preproccesimages.pickle'):
-        with open('preproccesimages.pickle', mode='rb') as f:
+modified_data = './../../full_data/preproccesimages.pickle'
+if os.path.isfile(modified_data):
+        with open(modified_data, mode='rb') as f:
                 X_train_new, y_train_new, X_test_new, y_test_new, X_valid_new, y_valid_new = pickle.load(f)
 else:
         X_train_new, y_train_new = preprocess_dataset(X_train, y_train)
@@ -136,7 +137,7 @@ else:
         y_test_new = y_test
         y_valid_new = y_valid
 
-        with open('preproccesimages.pickle', 'wb') as f:
+        with open(modified_data, 'wb') as f:
                 pickle.dump([X_train_new, y_train_new, X_test_new, y_test_new, X_valid_new, y_valid_new], f)
 
 #

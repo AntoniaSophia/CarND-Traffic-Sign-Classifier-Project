@@ -10,7 +10,7 @@ from sklearn.utils import shuffle
 # 
 # Load the traffic sign data from zipfile directly
 #
-archive_file = './../data/traffic-signs-data.zip'
+archive_file = './../../full_data/traffic-signs-data.zip'
 dataset = import_trafficsign(archive_file)
 
 X_train, y_train = dataset['X_train'], dataset['y_train']
@@ -44,9 +44,10 @@ def preprocess_dataset(rgb):
 import pickle
 import os.path
 
-if os.path.isfile('preproccesimages.pickle'):
+modified_data = './../../full_data/preproccesimages.pickle'
+if os.path.isfile(modified_data):
         print("load preproccesed images...")
-        with open('preproccesimages.pickle', mode='rb') as f:
+        with open(modified_data, mode='rb') as f:
                 X_train_hist, y_train_hist, X_test_hist, y_test_hist, X_valid_hist, y_valid_hist = pickle.load(f)
 
 X_train = X_train_hist
