@@ -161,8 +161,8 @@ The code for calculating the accuracy of the model is located in the cell number
 
 My final model results were:
 * training set accuracy (I did not explicitely calculate this value - it this number of any additional value !? )
-* validation set accuracy of 0.97 (see cell 14) 
-* test set accuracy of 0.943 (see cell 14)
+* test set accuracy of 0.943 (see cell 14 - inlcuding still dropouts)
+* validation set accuracy of 0.97 (see cell 14 - after removing dropouts completely) 
 
 I have chosen a well known architecture
 * What architecture was chosen? --> the LeNet archicture which was presented in the lesson 9:
